@@ -1,0 +1,16 @@
+{
+    "services": [
+        {
+            "name": "client-service",
+            "path": "client-service",
+            "target": {
+                "active": "http://localhost:4200",
+                "preview": "http://localhost:4300"
+            }
+        },
+        {
+            "name": "account service",
+            "path": "account-service"
+        }
+    ]
+}
