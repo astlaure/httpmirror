@@ -54,3 +54,15 @@ func CreateProxyRequest(request ProxyRequest, active ProxyMessage, preview Proxy
 	// Finish and run
 	tx.Commit()
 }
+
+func RetrieveRequests() []ProxyRequest {
+	var requests []ProxyRequest
+	core.DB.Select(&requests, selectAllRequestQuery)
+	return requests
+}
+
+func RetrieveMessagesByRequestID(requestID uint) []ProxyMessage {
+	var proxyMessages []ProxyMessage
+	core.DB.Select(&proxyMessages, selectMessagesByRequestIDQuery, requestID)
+	return proxyMessages
+}

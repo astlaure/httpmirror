@@ -19,3 +19,7 @@ Cannot be 100% library-less because we need a database driver
 
 1. go get github.com/mattn/go-sqlite3
 2. go get github.com/jmoiron/sqlx
+
+## Possible improvements
+
+1. Explore using a goroutine to save in the db and answer right away

@@ -38,3 +38,7 @@ var insertMessageQuery = `
 INSERT INTO proxy_messages (request_id, status, path, protocol, headers, body)
 VALUES (:request_id, :status, :path, :protocol, :headers, :body);
 `
+
+var selectMessagesByRequestIDQuery = `
+SELECT * FROM proxy_messages WHERE request_id = ?;
+`

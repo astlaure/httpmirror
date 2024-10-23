@@ -3,6 +3,7 @@ package messages
 import "time"
 
 type (
+	// ProxyRequest Add isMatching field
 	ProxyRequest struct {
 		ID        uint
 		Service   string
